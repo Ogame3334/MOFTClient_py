@@ -67,22 +67,57 @@ class Main:
             command=lambda: self.__osc_run(textbox_osc_ip.get(0., constants.END).replace('\n', ''), int(textbox_osc_port.get(0., constants.END).replace('\n', '')))
         )
         button.place(relx=0.5, rely=0.9, anchor=constants.CENTER)
-        # internal2_button = Button(
-        #     self.root, 
-        #     text='Internal 2', 
-        #     font=('Arial', 20),
-        #     command=lambda: self.osc_client.send("/input/Jump", 1)
-        # )
-        # internal2_button.place(relx=0.9, rely=0.2, anchor=constants.CENTER)
-        # internal_buttons = []
-        for i in range(2, 8):
-            button = Button(
-                self.root,
-                text="Internal" + str(i),
-                font=('Arial', 20),
-                command=lambda: self.__send_alarm(i)
-            )
-            button.place(relx=0.9, rely=i/10, anchor=constants.CENTER)
+        internal2_button = Button(
+            self.root, 
+            text='Internal 0', 
+            font=('Arial', 20),
+            command=lambda: self.__send_alarm(0)
+        )
+        internal2_button.place(relx=0.9, rely=0.2, anchor=constants.CENTER)
+        internal3_button = Button(
+            self.root, 
+            text='Internal 1', 
+            font=('Arial', 20),
+            command=lambda: self.__send_alarm(1)
+        )
+        internal3_button.place(relx=0.9, rely=0.3, anchor=constants.CENTER)
+        internal4_button = Button(
+            self.root, 
+            text='Internal 2', 
+            font=('Arial', 20),
+            command=lambda: self.__send_alarm(2)
+        )
+        internal4_button.place(relx=0.9, rely=0.4, anchor=constants.CENTER)
+        internal5_button = Button(
+            self.root, 
+            text='Internal 3', 
+            font=('Arial', 20),
+            command=lambda: self.__send_alarm(3)
+        )
+        internal5_button.place(relx=0.9, rely=0.5, anchor=constants.CENTER)
+        internal6_button = Button(
+            self.root, 
+            text='Internal 4', 
+            font=('Arial', 20),
+            command=lambda: self.__send_alarm(4)
+        )
+        internal6_button.place(relx=0.9, rely=0.6, anchor=constants.CENTER)
+        internal7_button = Button(
+            self.root, 
+            text='Internal 5', 
+            font=('Arial', 20),
+            command=lambda: self.__send_alarm(5)
+        )
+        internal7_button.place(relx=0.9, rely=0.7, anchor=constants.CENTER)
+        # # internal_buttons = []
+        # for i in range(2, 8):
+        #     button = Button(
+        #         self.root,
+        #         text="Internal" + str(i),
+        #         font=('Arial', 20),
+        #         command=lambda: self.__send_alarm(i)
+        #     )
+        #     button.place(relx=0.9, rely=i/10, anchor=constants.CENTER)
         temp_button = Button(
             self.root, 
             text='ジャンプ', 
